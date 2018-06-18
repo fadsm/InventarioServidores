@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Datacenter
+    public class Datacenter
     {
         public int DatacenterID { get; set;}
 
