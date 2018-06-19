@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using Model;
 using Controllers.DAL;
-
+using System.Linq;
 
 namespace Controllers
 {
@@ -34,19 +34,12 @@ namespace Controllers
             context.Entry(entity).State = System.Data.Entity.EntityState.Modified;           
         }
 
-        public IList<Machine> ListAll()
-        {
-            throw new NotImplementedException();
-        }
+        public IList<Machine> ListAll() => context.Machines.ToList();
 
-        public IList<Machine> ListByName(string name)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Machine SearchForId(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public IList<Machine> ListByName(string name) => context.Machines.Where(mach => mach.Name == name).ToList();
+
+        public Machine SearchForId(int id) => context.Machines.Find(id);
+
     }
 }
