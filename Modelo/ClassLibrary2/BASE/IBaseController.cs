@@ -8,15 +8,16 @@ namespace Controllers.BASE
 {
     interface IBaseController<T> where T : class
     {
-        void Adicionar(T entity);
-        IList<T> ListarTodos();
+        void Add(T entity);
 
-        IList<T> ListarPorNome(string nome);
+        IList<T> ListAll();
 
-        T BuscarPorID(int id);
+        IList<T> ListByName(string name);
 
-        void Editar(T entity);
+        T SearchForId(int id);
 
-        void Excluir(int id);
+        void Edit(T entity);
+
+        void Delete(int id);
     }
 }
