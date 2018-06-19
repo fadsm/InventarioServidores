@@ -19,12 +19,19 @@ namespace Controllers
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            Machine machi = SearchForId(id);
+
+            if (machi != null)
+            {
+                context.Entry(machi).State = System.Data.Entity.EntityState.Deleted;
+            }
+
+            context.SaveChanges();
         }
 
         public void Edit(Machine entity)
         {
-            throw new NotImplementedException();
+            context.Entry(entity).State = System.Data.Entity.EntityState.Modified;           
         }
 
         public IList<Machine> ListAll()
