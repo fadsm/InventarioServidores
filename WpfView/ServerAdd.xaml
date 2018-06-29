@@ -20,7 +20,7 @@
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Nome do Servidor:"/>
         <TextBox x:Name="ServerName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="24,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Endereço de IP"/><Run Text=":"/></TextBlock>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="24,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="IpAddress1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="24,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Sistema Operacional:"/>
         <TextBox x:Name="OperatingSystem" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="24,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24,216,0,0" TextWrapping="Wrap" Text="Fabricante:" VerticalAlignment="Top"/>
@@ -34,7 +34,7 @@
         <ComboBox x:Name="Datacenter" Grid.Column="1" HorizontalAlignment="Left" Margin="415,116,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="415,154,0,0" TextWrapping="Wrap" Text="Cluster:" VerticalAlignment="Top"/>
         <ComboBox x:Name="Cluster" Grid.Column="1" HorizontalAlignment="Left" Margin="415,176,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="Confirm" Content="Cadastrar Servidor" Grid.Column="1" HorizontalAlignment="Left" Margin="415,237,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Confirm" Content="Cadastrar Servidor" Grid.Column="1" HorizontalAlignment="Left" Margin="415,237,0,0" VerticalAlignment="Top" Width="120" Click="Confirm_Click"/>
 
     </Grid>
 </Window>

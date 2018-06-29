@@ -1,7 +1,10 @@
-﻿namespace Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Model
 {
     public class Machine
     {
+        [Key]
         public int MachineID { get; set; }
 
         public string Name { get; set; }
