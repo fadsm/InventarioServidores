@@ -32,7 +32,7 @@ namespace WpfView
             try
             {
                 MachineController machineController = new MachineController();
-
+                /*
                 if (string.IsNullOrEmpty(ServerName.Text))
                 {
                     throw new NullReferenceException("O campo nome do servidor está vazio");
@@ -57,16 +57,16 @@ namespace WpfView
                 {
                     throw new NullReferenceException("O campo cluster está vazio");
                 }
-
+                */
                 Machine machine = new Machine();
 
                 machine.Name = ServerName.Text;
                 machine.Ip = IpAddress1.Text;
                 machine.OperatingSystem = OperatingSystem.Text;
                 machine.Manufacturer = Manufacturer.Text;
-                machine._Cluster._Datacenter.Location = City.SelectedValue.ToString();
-                machine._Cluster._Datacenter.Name = Datacenter.SelectedValue.ToString();
-                machine._Cluster.Name = Cluster.SelectedValue.ToString();
+                //machine._Cluster._Datacenter.Location = City.SelectedValue.ToString();
+                //machine._Cluster._Datacenter.Name = Datacenter.SelectedValue.ToString();
+                //machine._Cluster.Name = Cluster.SelectedValue.ToString();
 
                 machineController.Add(machine);
 
@@ -88,7 +88,7 @@ namespace WpfView
                 str.Add("Kennedy");
                 Datacenter.ItemsSource = str;
             }
-            else if (City.SelectedValue.ToString().Equals("São Paulo"))
+            else //if (City.SelectedValue.ToString().Equals("São Paulo"))
             {
                 List<String> str = new List<string>();
                 str.Add("Cidade de Deus");
