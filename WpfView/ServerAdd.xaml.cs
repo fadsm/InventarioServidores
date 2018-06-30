@@ -45,15 +45,15 @@ namespace WpfView
                 {
                     throw new NullReferenceException("O campo sistema operacional está vazio");
                 }
-                if (string.IsNullOrEmpty(City.Text))
+                if (string.IsNullOrEmpty(City.SelectedValue.ToString()))
                 {
                     throw new NullReferenceException("O campo cidade está vazio");
                 }
-                if (string.IsNullOrEmpty(Datacenter.Text))
+                if (string.IsNullOrEmpty(Datacenter.SelectedValue.ToString()))
                 {
                     throw new NullReferenceException("O campo datacenter está vazio");
                 }
-                if (string.IsNullOrEmpty(Cluster.Text))
+                if (string.IsNullOrEmpty(Cluster.SelectedValue.ToString()))
                 {
                     throw new NullReferenceException("O campo cluster está vazio");
                 }
@@ -64,9 +64,9 @@ namespace WpfView
                 machine.Ip = IpAddress1.Text;
                 machine.OperatingSystem = OperatingSystem.Text;
                 machine.Manufacturer = Manufacturer.Text;
-                machine._Cluster._Datacenter.Location = City.Text;
-                machine._Cluster._Datacenter.Name = Datacenter.Text;
-                machine._Cluster.Name = Cluster.Text;
+                machine._Cluster._Datacenter.Location = City.SelectedValue.ToString();
+                machine._Cluster._Datacenter.Name = Datacenter.SelectedValue.ToString();
+                machine._Cluster.Name = Cluster.SelectedValue.ToString();
 
                 machineController.Add(machine);
 
@@ -77,6 +77,27 @@ namespace WpfView
             {
                 MessageBox.Show("Erro ao salvar" + ex.Message);
             }
+        }
+
+        private void City_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (City.SelectedValue.ToString().Equals("Curitiba"))
+            {
+                List<String> str = new List<string>();
+                str.Add("Xaxim");
+                str.Add("Kennedy");
+                Datacenter.ItemsSource = str;
+            }
+            else if (City.SelectedValue.ToString().Equals("São Paulo"))
+            {
+                List<String> str = new List<string>();
+                str.Add("Cidade de Deus");
+                str.Add("Alphaville");
+                Datacenter.ItemsSource = str;
+            }
+           
+
+            
         }
     }
 }

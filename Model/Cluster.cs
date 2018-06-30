@@ -1,7 +1,10 @@
-﻿namespace Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Model
 {
     public class Cluster
     {
+        [Key]
         public int ClusterID { get; set; }
 
         public string Name { get; set; }
