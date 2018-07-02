@@ -15,6 +15,8 @@ namespace Model
 
         public string Manufacturer { get; set; }
 
+        public int ClusterIDFK { get; set; }
+
         public virtual Cluster _Cluster {get; set;}
     }
 }

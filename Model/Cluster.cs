@@ -11,6 +11,8 @@ namespace Model
 
         public string Manufacturer { get; set; }
 
+        public int DatacenterIDFK { get; set; }
+
         public virtual Datacenter _Datacenter { get; set; }
     }
 }
