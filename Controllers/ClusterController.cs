@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class ClusterController : IBaseController<Cluster>
+    public class ClusterController : IBaseController<Cluster>
     {
         private Context context = new Context();
 

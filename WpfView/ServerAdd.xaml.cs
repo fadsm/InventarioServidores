@@ -32,41 +32,39 @@ namespace WpfView
             try
             {
                 MachineController machineController = new MachineController();
-                /*
+
+                ClusterController clusterController = new ClusterController();
+
+                DatacenterController datacenterController = new DatacenterController();
+
                 if (string.IsNullOrEmpty(ServerName.Text))
                 {
                     throw new NullReferenceException("O campo nome do servidor está vazio");
                 }
-                if (string.IsNullOrEmpty(IpAddress1.Text))
-                {
-                    throw new NullReferenceException("O campo endereço de IP está vazio");
-                }
-                if (string.IsNullOrEmpty(OperatingSystem.Text))
-                {
-                    throw new NullReferenceException("O campo sistema operacional está vazio");
-                }
-                if (string.IsNullOrEmpty(City.SelectedValue.ToString()))
-                {
-                    throw new NullReferenceException("O campo cidade está vazio");
-                }
-                if (string.IsNullOrEmpty(Datacenter.SelectedValue.ToString()))
-                {
-                    throw new NullReferenceException("O campo datacenter está vazio");
-                }
-                if (string.IsNullOrEmpty(Cluster.SelectedValue.ToString()))
-                {
-                    throw new NullReferenceException("O campo cluster está vazio");
-                }
-                */
+
+                Datacenter datacenter = new Datacenter();
+
+                datacenter.Name = Datacenter.SelectedValue.ToString();
+                datacenter.Location = City.SelectedValue.ToString();
+
+                datacenterController.Add(datacenter);
+
+                Cluster cluster = new Cluster();
+
+                cluster.Name = Cluster.SelectedValue.ToString();
+
+                cluster.DatacenterIDFK = datacenter.DatacenterID;
+
+                clusterController.Add(cluster);
+
                 Machine machine = new Machine();
 
                 machine.Name = ServerName.Text;
                 machine.Ip = IpAddress1.Text;
                 machine.OperatingSystem = OperatingSystem.Text;
                 machine.Manufacturer = Manufacturer.Text;
-                //machine._Cluster._Datacenter.Location = City.SelectedValue.ToString();
-                //machine._Cluster._Datacenter.Name = Datacenter.SelectedValue.ToString();
-                //machine._Cluster.Name = Cluster.SelectedValue.ToString();
+
+                machine.ClusterIDFK = cluster.ClusterID;
 
                 machineController.Add(machine);
 
