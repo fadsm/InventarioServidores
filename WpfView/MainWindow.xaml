@@ -14,7 +14,7 @@
 
         <StackPanel Grid.Column="0" Background="Gray">
             <TextBlock HorizontalAlignment="Right" Margin="0,14,26,0" TextWrapping="Wrap" Text="Selecione a opção desejada:" VerticalAlignment="Top" Height="16" Width="149"/>
-            <Button x:Name="ServerSearch" Content="Consultar Servidores" HorizontalAlignment="Left" Margin="42,37,0,0" VerticalAlignment="Top" Width="116" Height="20"/>
+            <Button x:Name="ServerSearch" Content="Consultar Servidores" HorizontalAlignment="Left" Margin="42,37,0,0" VerticalAlignment="Top" Width="116" Height="20" Click="ServerSearch_Click"/>
             <Button Content="Adicionar Servidor" Margin="42,66,42,0" VerticalAlignment="Top" Height="20" Click="AddServer_Click"/>
         </StackPanel>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="198,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Bem-vindo ao sistema de Servidores!"/><LineBreak/><Run/></TextBlock>

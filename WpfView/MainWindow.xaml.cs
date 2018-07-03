@@ -30,5 +30,11 @@ namespace WpfView
             ServerAdd svrAdd = new ServerAdd();
             svrAdd.ShowDialog();
         }
+
+        private void ServerSearch_Click(object sender, RoutedEventArgs e)
+        {
+            ViewServer viewSvr = new ViewServer();
+            viewSvr.ShowDialog();
+        }
     }
 }
