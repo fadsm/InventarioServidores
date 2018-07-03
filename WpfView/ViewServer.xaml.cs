@@ -37,11 +37,21 @@ namespace WpfView
         private void Window_Loaded(object sender, RoutedEventArgs e)
 
         {
+            CarregarGrid();
+        }
 
+        private void CarregarGrid()
+        {
             MachineController machineContoller = new MachineController();
 
             ServerList.ItemsSource = machineContoller.ListAll();
+        }
 
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            MachineController machineContoller = new MachineController();
+
+            ServerList.ItemsSource = machineContoller.ListByName(SearchBox.Text);
         }
     }
 }
