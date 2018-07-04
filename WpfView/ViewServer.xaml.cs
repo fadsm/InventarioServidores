@@ -28,9 +28,8 @@ namespace WpfView
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DataGrid dg = ((DataGrid)sender);
-
-            Machine mach = (Machine)dg.Items[dg.SelectedIndex];
+            EditDelete edidel = new EditDelete();
+            edidel.ShowDialog();
         }
 
 

@@ -42,16 +42,21 @@ namespace WpfView
                     throw new NullReferenceException("O campo nome do servidor está vazio");
                 }
 
+                if (string.IsNullOrEmpty(IpAddress1.Text))
+                {
+                    throw new NullReferenceException("O campo nome do servidor está vazio");
+                }
+
                 Datacenter datacenter = new Datacenter();
 
-                datacenter.Name = Datacenter.SelectedValue.ToString();
-                datacenter.Location = City.SelectedValue.ToString();
+                datacenter.Name = Datacenter.Text;
+                datacenter.Location = City.Text;
 
                 datacenterController.Add(datacenter);
 
                 Cluster cluster = new Cluster();
 
-                cluster.Name = Cluster.SelectedValue.ToString();
+                cluster.Name = Cluster.Text;
 
                 cluster.DatacenterIDFK = datacenter.DatacenterID;
 
@@ -75,27 +80,6 @@ namespace WpfView
             {
                 MessageBox.Show("Erro ao salvar" + ex.Message);
             }
-        }
-
-        private void City_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (City.SelectedValue.ToString().Equals("Curitiba"))
-            {
-                List<String> str = new List<string>();
-                str.Add("Xaxim");
-                str.Add("Kennedy");
-                Datacenter.ItemsSource = str;
-            }
-            else //if (City.SelectedValue.ToString().Equals("São Paulo"))
-            {
-                List<String> str = new List<string>();
-                str.Add("Cidade de Deus");
-                str.Add("Alphaville");
-                Datacenter.ItemsSource = str;
-            }
-           
-
-            
         }
     }
 }

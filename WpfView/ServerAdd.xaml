@@ -26,18 +26,13 @@
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24,216,0,0" TextWrapping="Wrap" Text="Fabricante:" VerticalAlignment="Top"/>
         <TextBox x:Name="Manufacturer" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="24,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="415,35,0,0" TextWrapping="Wrap" Text="Cidade:" VerticalAlignment="Top"/>
-        <ComboBox x:Name="City" Grid.Column="1" HorizontalAlignment="Left" Margin="415,57,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="City_SelectionChanged" >
-            <ComboBoxItem Content="Curitiba"/>
-            <ComboBoxItem Content="Sao Paulo"/>
-        </ComboBox>
+
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="415,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Datacente"/><Run Text="r:"/></TextBlock>
-        <ComboBox x:Name="Datacenter" Grid.Column="1" HorizontalAlignment="Left" Margin="415,116,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Datacenter" Grid.Column="1" HorizontalAlignment="Left" Margin="415,116,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="415,154,0,0" TextWrapping="Wrap" Text="Cluster:" VerticalAlignment="Top"/>
-        <ComboBox x:Name="Cluster" Grid.Column="1" HorizontalAlignment="Left" Margin="415,176,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="Cisco"/>
-            <ComboBoxItem Content="Dell"/>
-        </ComboBox>
+        <TextBox x:Name="Cluster" Grid.Column="1" HorizontalAlignment="Left" Margin="415,176,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="Confirm" Content="Cadastrar Servidor" Grid.Column="1" HorizontalAlignment="Left" Margin="415,237,0,0" VerticalAlignment="Top" Width="120" Click="Confirm_Click"/>
+        <TextBox x:Name="City" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="415,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
