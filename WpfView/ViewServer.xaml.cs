@@ -21,29 +21,27 @@ namespace WpfView
     /// </summary>
     public partial class ViewServer : Window
     {
+
         public ViewServer()
         {
             InitializeComponent();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            EditDelete edidel = new EditDelete();
-            edidel.ShowDialog();
-        }
-
-
+    
         private void Window_Loaded(object sender, RoutedEventArgs e)
 
         {
-            CarregarGrid();
+            CarregarGrid();           
         }
 
         private void CarregarGrid()
         {
-            MachineController machineContoller = new MachineController();
+            MachineController machineController = new MachineController();
 
-            ServerList.ItemsSource = machineContoller.ListAll();
+            IList<Machine> machines = machineController.ListAll();
+
+            ServerList.ItemsSource = machines;
+
         }
 
         private void Search_Click(object sender, RoutedEventArgs e)
@@ -51,6 +49,33 @@ namespace WpfView
             MachineController machineContoller = new MachineController();
 
             ServerList.ItemsSource = machineContoller.ListByName(SearchBox.Text);
+        }
+
+        private void ServerList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ClusterController clusterController = new ClusterController();
+            DatacenterController datacenterController = new DatacenterController();
+
+            Machine machine = (Machine)ServerList.SelectedItem;
+            Cluster cluster = clusterController.SearchForId(machine.ClusterIDFK);
+            Datacenter datacenter = datacenterController.SearchForId(cluster.DatacenterIDFK);
+
+            EditDelete edit = new EditDelete(machine, cluster, datacenter);
+
+            edit.ShowDialog();
+
+            this.Close();
+        }
+
+        private void Deletar_Click(object sender, RoutedEventArgs e)
+        {
+            MachineController machineController = new MachineController();
+
+            Machine machine = (Machine)ServerList.SelectedItem;
+
+            machineController.Delete(machine.MachineID);
+
+            MessageBox.Show("Máquina deletada com sucesso!");
         }
     }
 }

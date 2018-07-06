@@ -75,6 +75,7 @@ namespace WpfView
 
                 MessageBox.Show("Máquina criada com sucesso!");
 
+
             }
             catch(Exception ex)
             {

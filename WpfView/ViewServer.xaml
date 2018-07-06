@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="ViewServer" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="ServerList" CanUserAddRows="False" CanUserDeleteRows="False" HorizontalAlignment="Left" Height="289" Margin="64,71,0,0" VerticalAlignment="Top" Width="654" SelectionChanged="DataGrid_SelectionChanged"/>
+        <DataGrid x:Name="ServerList" CanUserAddRows="False" CanUserDeleteRows="False" HorizontalAlignment="Left" Height="289" Margin="64,71,0,0" VerticalAlignment="Top" Width="654" SelectionMode="Single"  SelectionUnit="FullRow" AutoGenerateColumns="True" MouseDoubleClick="ServerList_MouseDoubleClick"/>
         <Label Content="Buscar por nome do servidor:" HorizontalAlignment="Left" Margin="64,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="64,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158"/>
         <Button x:Name="Search" Content="Buscar" HorizontalAlignment="Left" Margin="254,36,0,0" VerticalAlignment="Top" Width="75" Click="Search_Click"/>
+        <Button x:Name="Deletar" Content="Deletar" HorizontalAlignment="Left" Margin="640,381,0,0" VerticalAlignment="Top" Width="75" Click="Deletar_Click"/>
+
 
     </Grid>
 </Window>

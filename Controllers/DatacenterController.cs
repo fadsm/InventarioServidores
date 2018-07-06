@@ -40,6 +40,9 @@ namespace Controllers
 
         public IList<Datacenter> ListByName(string name) => context.Datacenters.Where(dat => dat.Name == name).ToList();
 
-        public Datacenter SearchForId(int id) => context.Datacenters.Find(id);
+        public Datacenter SearchForId(int id)
+        {
+            return context.Datacenters.Find(id);
+        }
     }
 }

@@ -36,7 +36,6 @@ namespace Controllers
 
         public IList<Machine> ListAll() => context.Machines.ToList();
 
-
         public IList<Machine> ListByName(string name) => context.Machines.Where(mach => mach.Name == name).ToList();
 
         public Machine SearchForId(int id) => context.Machines.Find(id);
