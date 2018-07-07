@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfView.ClusterView;
+using WpfView.DatacenterView;
 
 namespace WpfView
 {
@@ -25,16 +27,32 @@ namespace WpfView
             InitializeComponent();
         }
 
-        private void AddServer_Click(object sender, RoutedEventArgs e)
+        private void AddDatacenter_Click(object sender, RoutedEventArgs e)
         {
-            ServerAdd svrAdd = new ServerAdd();
-            svrAdd.ShowDialog();
+            DatacenterAdd datadd = new DatacenterAdd();
+
+            datadd.ShowDialog();
         }
 
-        private void ServerSearch_Click(object sender, RoutedEventArgs e)
+        private void AddCluster_Click(object sender, RoutedEventArgs e)
         {
-            ViewServer viewSvr = new ViewServer();
-            viewSvr.ShowDialog();
+            ClusterAdd cluadd = new ClusterAdd();
+
+            cluadd.ShowDialog();
+        }
+
+        private void ManageDatacenter_Click(object sender, RoutedEventArgs e)
+        {
+            DatacenterManage mngdat = new DatacenterManage();
+
+            mngdat.ShowDialog();
+        }
+
+        private void ManageCluster_Click(object sender, RoutedEventArgs e)
+        {
+            ClusterManage mngclu = new ClusterManage();
+
+            mngclu.ShowDialog();
         }
     }
 }

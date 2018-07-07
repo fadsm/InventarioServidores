@@ -13,9 +13,7 @@ namespace Model
 
         public string OperatingSystem { get; set; }
 
-        public string Manufacturer { get; set; }
-
-        public int ClusterIDFK { get; set; }
+        public int ClusterID { get; set; }
 
         public virtual Cluster _Cluster {get; set;}
     }

@@ -11,6 +11,5 @@ namespace Model
 
         public string Location { get; set; }
 
-        public string OrganizationUnit { get; set; }
     }
 }

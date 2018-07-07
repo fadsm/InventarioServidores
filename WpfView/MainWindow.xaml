@@ -14,8 +14,10 @@
 
         <StackPanel Grid.Column="0" Background="Gray">
             <TextBlock HorizontalAlignment="Right" Margin="0,14,26,0" TextWrapping="Wrap" Text="Selecione a opção desejada:" VerticalAlignment="Top" Height="16" Width="149"/>
-            <Button x:Name="ServerSearch" Content="Consultar Servidores" HorizontalAlignment="Left" Margin="42,37,0,0" VerticalAlignment="Top" Width="116" Height="20" Click="ServerSearch_Click"/>
-            <Button Content="Adicionar Servidor" Margin="42,66,42,0" VerticalAlignment="Top" Height="20" Click="AddServer_Click"/>
+            <Button x:Name="AddDatacenter" Content="Adicionar Datacenter" Click="AddDatacenter_Click" />
+            <Button x:Name="AddCluster" Content="Adicionar Cluster" Click="AddCluster_Click" />
+            <Button x:Name="ManageDatacenter" Content="Gerenciar Datacenters" Click="ManageDatacenter_Click" />
+            <Button x:Name="ManageCluster" Content="Editar Clusters" Click="ManageCluster_Click" />
         </StackPanel>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="198,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Bem-vindo ao sistema de Servidores!"/><LineBreak/><Run/></TextBlock>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="177,64,0,0" TextWrapping="Wrap" Text="Para iniciar, selecione uma das opções ao lado." VerticalAlignment="Top"/>

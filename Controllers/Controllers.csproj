@@ -78,6 +78,10 @@
     <Compile Include="Migrations\201807022257061_MigrationInvetarioV2.Designer.cs">
       <DependentUpon>201807022257061_MigrationInvetarioV2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807070022339_Model Entity Update.cs" />
+    <Compile Include="Migrations\201807070022339_Model Entity Update.Designer.cs">
+      <DependentUpon>201807070022339_Model Entity Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -112,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807022257061_MigrationInvetarioV2.resx">
       <DependentUpon>201807022257061_MigrationInvetarioV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807070022339_Model Entity Update.resx">
+      <DependentUpon>201807070022339_Model Entity Update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
