@@ -49,7 +49,7 @@ namespace WpfView.DatacenterView
             datacenter.Location = DatacenterLocation.Text;
 
             datacenterController.Edit(datacenter);
-            datacenterController.Add(datacenter);
+            
 
             MessageBox.Show("Datacenter editado com sucesso!");
         }

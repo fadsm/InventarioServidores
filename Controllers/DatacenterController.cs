@@ -34,6 +34,7 @@ namespace Controllers
         public void Edit(Datacenter entity)
         {
             context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            context.SaveChanges();
         }
 
         public IList<Datacenter> ListAll() => context.Datacenters.ToList();

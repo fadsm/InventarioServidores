@@ -47,7 +47,7 @@ namespace WpfView.ClusterView
             cluster.Manufacturer = ClusterManufacturer.Text;
 
             clusterController.Edit(cluster);
-            clusterController.Add(cluster);
+            
 
             MessageBox.Show("Cluster editado com sucesso!");
         }

@@ -26,14 +26,18 @@ namespace Controllers
             if (clust != null)
             {
                 context.Entry(clust).State = System.Data.Entity.EntityState.Deleted;
+
+                context.SaveChanges();
             }
 
-            context.SaveChanges();
+            
         }
 
         public void Edit(Cluster entity)
         {
             context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+
+            context.SaveChanges();
         }
 
         public IList<Cluster> ListAll() => context.Clusters.ToList();
