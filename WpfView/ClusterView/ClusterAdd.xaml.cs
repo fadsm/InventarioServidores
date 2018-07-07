@@ -25,9 +25,11 @@ namespace WpfView.ClusterView
         {
             InitializeComponent();
 
-            ClusterController clusterController = new ClusterController();
+            DatacenterController datacenterController = new DatacenterController();
 
-            ComboBoxDatacenter.ItemsSource = clusterController.ListAll();
+            ComboBoxDatacenter.ItemsSource = datacenterController.ListAll();
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -37,10 +39,13 @@ namespace WpfView.ClusterView
 
             cluster.Name = ClusterName.Text;
             cluster.Manufacturer = ClusterManufacturer.Text;
-
+            cluster.DatacenterID = (ComboBoxDatacenter.SelectedItem as Datacenter).DatacenterID;
+                
 
 
             clusterController.Add(cluster);
+
+            MessageBox.Show("Cluster criado com sucesso!");
 
         }
     }

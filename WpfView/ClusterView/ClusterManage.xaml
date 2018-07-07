@@ -8,7 +8,7 @@
         Title="ClusterManage" Height="450" Width="800">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="280,29,0,0" TextWrapping="Wrap" Text="Gerenciar Clusters, clique para editar" VerticalAlignment="Top"/>
-        <DataGrid x:Name="ClusterList" HorizontalAlignment="Left" Height="100" Margin="98,58,0,0" VerticalAlignment="Top" Width="610"/>
+        <DataGrid x:Name="ClusterList" HorizontalAlignment="Left" Height="100" Margin="98,58,0,0" VerticalAlignment="Top" Width="610" Loaded="ClusterList_Loaded" SelectionChanged="ClusterList_SelectionChanged"/>
 
     </Grid>
 </Window>

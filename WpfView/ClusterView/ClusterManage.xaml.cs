@@ -37,10 +37,10 @@ namespace WpfView.ClusterView
 
         private void ClusterList_Loaded(object sender, RoutedEventArgs e)
         {
-
             ClusterController clusterController = new ClusterController();
 
             ClusterList.ItemsSource = clusterController.ListAll();
         }
+
     }
 }
